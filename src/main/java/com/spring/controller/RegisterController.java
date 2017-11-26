@@ -28,7 +28,9 @@ public class RegisterController {
 		professionList.add("Developer");
 		professionList.add("Designer");
 		professionList.add("IT Manager");
-		professionList.add("DevOps");
+		professionList.add("Manager");
+		professionList.add("Backend Manager");
+		professionList.add("Dev Manager");
 		
 		
 		model.put("professionList", professionList);
