@@ -1,0 +1,75 @@
+
+ sudo yum list | grep jdk
+sudo yum install -y java-1.8.0-openjdk-devel.x86_64
+sudo update-alternatives --config java
+
+sudo java -version
+
+
+=========================JENKINS INSTALL AND START ==========================================
+go to google and search for jenkins download , and select RHEL/CENTOS/
+
+run sudo wget -O ..., sudo rpm --import ..., yum install jenkins 
+
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum install jenkins
+sudo service jenkins start
+sudo chkconfig jenkins on
+sudo more /var/lib/jenkins/secrets/initialAdminPassword
+
+=========================================INSTALL  MAVEN AND START============================
+
+
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+mvn --version 
+
+============================================INSTALL GIT AND START======================
+ sudo yum install git -y
+   21  pwd
+   22  cd /opt
+   23  wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
+   24  sudo wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
+   25  pwd
+   
+   28  chmod 755 apache-tomcat-8.5.27.tar.gz
+   29  tar -xvf apache-tomcat-8.5.27.tar.gz
+   30  sudo tar -xvf apache-tomcat-8.5.27.tar.gz
+   35  cd apache-tomcat-8.5.27/
+   36  pwd
+   41  sudo mv apache-tomcat-8.5.27/ tomcat8
+   42  ll
+   43  cd tomcat8/
+   44  ll
+   45  pwd
+   46  cd ..
+   47  ll
+   48  chown -R ec2-user:ec2-user tomcat8
+   49  sudo chown -R ec2-user:ec2-user tomcat8
+
+ 51  cd tomcat8/
+   52  ll
+   53  cd conf
+   54  ll
+   55  vi server.xml
+   56  pwd
+   57  cd ..
+   58  ll
+   59  pwd
+   60  ll
+   61  cd conf
+   62  ll
+   63  vi tomcat-users.xml
+   64  clear
+   65  pwd
+   66  ls -ltr
+   67  clear
+   68  pwd
+
+==============================================================
+
+
+
